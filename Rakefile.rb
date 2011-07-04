@@ -41,7 +41,7 @@ end
 
 desc 'Deploy my site'
 task :deploy do
-  
+  puts `ssh chris@sevenservers.com 'cd ~/www/chris/public_html && git pull'`
 end
 
 task :default => [:build, :watch]
