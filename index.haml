@@ -1,0 +1,203 @@
+!!! 5
+%html
+  %link{:href => 'http://fonts.googleapis.com/css?family=Raleway:100&v1',  :rel => 'stylesheet', :type => 'text/css'}
+  %link{:href => 'http://fonts.googleapis.com/css?family=Ubuntu&v1',  :rel => 'stylesheet', :type => 'text/css'}
+  %link{:href => 'http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911&v1',  :rel => 'stylesheet', :type => 'text/css'}
+  
+  %link{:rel => 'stylesheet', :href => 'css/reset.css'}
+  %link{:rel => 'stylesheet', :href => 'css/style.css'}
+  
+  %title Christopher Li
+  
+  %body
+    %nav#main_nav
+      %ul
+        %li
+          %a{:href => '#projects', :rel => 'tiptip-nav', :title => 'Projects'}
+            %img{:src => 'img/projects.png'}
+        %li
+          %a{:href => '#resume', :rel => 'tiptip-nav', :title => 'Resume'}
+            %img{:src => 'img/resume.png'}
+        %li
+          %a{:href => '#contact', :rel => 'tiptip-nav', :title => 'Contact'}
+            %img{:src => 'img/contact.png'}
+        %li
+          %a{:href => '#calendar', :rel => 'tiptip-nav', :title => 'Calendar'}
+            %img{:src => 'img/calendar.png'}
+    
+    %section#content
+      %h1.name Christopher Li
+      %article{:id => 'projects'}
+        %h1 Projects
+        
+        %h2 Maxel
+        %a{:href => 'https://github.com/unregistered/Maxel', :class => 'goto', :target => 'blank'} Github
+        %p
+          A work-in-progress download accelerator for Mac OS. Implemented in MacRuby and uses Axel to do the downloading.
+      
+        %h2 BeoHawk
+        %a{:href => 'http://code.google.com/p/uscrs', :class => 'goto', :target => 'blank'} Google Code
+        %p
+          Wrote software with ROS in C++ and Python for the USC Aerial Robotics Team's autonomous quadrotor helicopter. This will be the first year the university attends the AVUSI competition.
+      
+        %h2 USC Robotics Society
+        %a{:href => 'http://uscrs.org', :class => 'goto', :target => 'blank'} Live site
+        %p
+          Developed web services to help the robotics club operate smoothly using PyroCMS, which uses the CodeIgniter 
+          %span.sc php
+          framework. Worked closely with the business management team to develop an ordering system that automated reimbursements and organized their receipts. Contributed patches to the upstream project.
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      %article{:id => 'resume'}
+        %h1 
+          Resume
+          %a{:href => 'chrisli_resume.pdf', :rel => 'tiptip', :title => 'Download hot off PDFLaTeX!'}
+            %img{:src => 'img/inbox.png'}
+        
+        
+        %h2 Work Experience
+        %h3.left Developer at BountyBuy (2011-present)
+        %a{:href => 'http://bountybuy.com', :class => 'goto', :target => 'blank'} Live site
+        %p Worked for the VC-funded startup to create a new kind of shopping website. Responsible for implementation of designs to haml and sass as well as JavaScript interactions. Also contributed to back end work in Ruby on Rails.
+        
+        %h3 Paid Research for USC Robotics (2011)
+        %p Received the Rose Hill Foundation Fellowship for working at USC Aerial Robotics on BeoHawk. 
+        
+        
+        %h2 Languages
+        %ul.inline
+          %li C++ 
+          %li.sc php 
+          %li.sc sql 
+          %li.sc matlab 
+          %li.sc html 
+          %li.sc css 
+          %li JavaScript 
+          %li Bash 
+          %li Ruby 
+          %li LaTeX 
+          %li Verilog 
+            
+            
+        
+        %h2 Tools
+        %ul.inline
+          %li.sc matlab 
+          %li Adobe Illustrator 
+          %li Photoshop 
+          %li Fireworks 
+          %li Bash 
+          %li Vim 
+          %li *nix Administration 
+          %li Git 
+          %li Subversion 
+          %li Xilinx ISE
+            
+                      
+        
+        
+        %h2 Education
+        %p 
+          Undergraduate in Electrical Engineering
+          %br/
+          University of Southern California (2009 - present)
+        %p
+          International Baccalaureate Diploma
+          %br/
+          Diamond Bar High School (2005 - 2009)
+        
+        
+        %h2 Honors and Awards
+        %ul
+          %li Eta Kappa Nu Electrical and Computer Engineering Honors Society 2011 - present
+          %li Viterbi School of Engineering Dean's List 2009 - present
+          %li Alpha Lambda Delta Honors Society 2009 - present
+          %li USC Presidential Scholarship 2009 - present
+          %li W.V.T. Rusch Engineering Honors Program 2009 - present
+          %li National Merit Scholarship Finalist 2009
+          %li AP Scholar with Honor 2009
+          %li International Baccalaureate Diploma 2009
+          %li UC Santa Barbra Reagent Scholarship (declined) 2009
+          %li Principal's Honors Roll 2005 - 2009
+          %li International Baccalaureate Dean's List 200
+        
+        
+        
+        
+        
+        
+        
+        
+      %article{:id => 'contact'}
+        %h1 Contact
+        %ul.contact
+          %li
+            %a.email{:href => 'mailto:licy@usc.edu'} Email 
+          %li
+            %a.facebook{:href => 'http://facebook.com/christopher.y.li'} Facebook
+          %li
+            %a.twitter{:href => 'http://twitter.com/unregisteredusr'} Twitter
+          %li
+            %a.linkedin{:href => 'http://www.linkedin.com/pub/chris-li/13/b02/929'} Linkedin
+          %li
+            %a.lastfm{:href => 'http://last.fm/user/unregisteredusr'} last.fm
+          %li
+            %a.github{:href => 'http://github.com/unregistered'} github
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+      %article{:id => 'calendar'}
+        %h1 Calendar
+        :plain
+          <iframe id="cal_iframe" src="https://www.google.com/calendar/hosted/usc.edu/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=340&amp;wkst=1&amp;bgcolor=%23FDFDFA&amp;src=divinechancellor%40gmail.com&amp;color=%232952A3&amp;src=usc.edu_5kmma50b7ofmr6j703uohai0fs%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+
+
+
+
+
+
+
+
+
+
+  
+  %script{:src => 'js/jquery.min.js'}
+  %script{:src => 'js/jquery.tipTip.minified.js'}
+  :javascript
+    $(function(){
+      $('#main_nav a[rel="tiptip-nav"]').tipTip({defaultPosition: 'right', delay: 0});
+      $('a[rel="tiptip"]').tipTip();
+    });
+    
+  - if true
+    :plain
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24356718-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>

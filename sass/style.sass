@@ -1,0 +1,222 @@
+@charset "utf-8"
+
+@mixin header
+  font-family: 'Raleway', sans-serif
+@mixin body
+  font-family: 'Goudy Bookletter 1911', serif
+@mixin ubuntu
+  font-family: 'Ubuntu', sans-serif
+  
+body
+  background: #FDFDFA
+  font-size: 15pt
+  +body
+  
+left
+  float: left
+right
+  float: right
+
+h1, h2, h3, h4, h5
+  margin: 0
+h1, h2
+  +header
+  
+  
+h1
+  font-size: 2.0em
+  text-align: center
+  padding-top: 25px
+  margin-top: 25px
+  border-top: 1px solid #ccc
+  
+h2
+  font-size: 1.5em
+  margin: 20px 0 0 0
+  
+h3
+  font-size: 1.0em
+  margin: 10px 0 10px 0
+  font-weight: bold
+  
+p
+  font-size: 1em
+  margin-bottom: 20px
+
+#projects, #resume
+  .goto
+    background: url('../img/arrow-east.png') no-repeat right
+    padding-right: 25px
+    text-decoration: none
+    opacity: 0.3
+    color: inherit
+    float: right
+    margin-top: 25px
+    &:hover
+      color: inherit
+      opacity: 1
+  .goto+*
+    clear: both
+    
+#projects
+  h2
+    float: left
+
+#resume
+  .goto
+    margin-top: 5px
+  
+h1.name
+  background: none
+  padding: 0
+  margin: 30px 0 20px 0
+  text-align: left
+  border: none
+  font-size: 3.0em
+
+.sc
+  font-size: smaller
+  text-transform: uppercase
+  
+#main_nav
+  position: fixed
+  top: 25px
+  li
+    display: block
+    width: 64px
+    height: 64px
+    img
+      margin: 0 auto
+      display: block
+      vertical-align: middle
+      &:hover
+        opacity: 0.8
+    
+ul.inline
+  margin: 0
+  padding: 0
+  li
+    margin-right: 10px
+    padding-right: 10px
+    display: inline
+
+ul.contact
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+    a
+      text-decoration: none
+      color: #aaa
+      +ubuntu
+      font-size: 1.2em
+      -webkit-transition: color 0.2s linear
+      -moz-transition: color 0.2s linear
+      -o-transition: color 0.2s linear
+      &:hover
+        &.email
+          color: black
+        &.facebook
+          color: #3b5998
+        &.twitter
+          color: #009DCD
+        &.lastfm
+          color: #df1303
+        &.linkedin
+          color: #70B6D9
+        &.github
+          color: #000
+
+#content
+  width: 75%
+  margin: 0 auto
+  padding-left: 100px
+  
+    
+
+/* TipTip CSS - Version 1.2
+
+#tiptip_holder
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 99999
+  &.tip_top
+    padding-bottom: 5px
+  &.tip_bottom
+    padding-top: 5px
+  &.tip_right
+    padding-left: 5px
+  &.tip_left
+    padding-right: 5px
+
+#tiptip_content
+  font-family: sans-serif
+  font-size: 11px
+  color: #fff
+  text-shadow: 0 0 2px #000
+  padding: 4px 8px
+  border: 1px solid rgba(255, 255, 255, 0.25)
+  background-color: rgb(25, 25, 25)
+  background-color: rgba(25, 25, 25, 0.92)
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(black))
+  border-radius: 3px
+  -webkit-border-radius: 3px
+  -moz-border-radius: 3px
+  box-shadow: 0 0 3px #555
+  -webkit-box-shadow: 0 0 3px #555
+  -moz-box-shadow: 0 0 3px #555
+
+#tiptip_arrow, #tiptip_arrow_inner
+  position: absolute
+  border-color: transparent
+  border-style: solid
+  border-width: 6px
+  height: 0
+  width: 0
+
+#tiptip_holder
+  &.tip_top #tiptip_arrow
+    border-top-color: #fff
+    border-top-color: rgba(255, 255, 255, 0.35)
+  &.tip_bottom #tiptip_arrow
+    border-bottom-color: #fff
+    border-bottom-color: rgba(255, 255, 255, 0.35)
+  &.tip_right #tiptip_arrow
+    border-right-color: #fff
+    border-right-color: rgba(255, 255, 255, 0.35)
+  &.tip_left #tiptip_arrow
+    border-left-color: #fff
+    border-left-color: rgba(255, 255, 255, 0.35)
+  &.tip_top #tiptip_arrow_inner
+    margin-top: -7px
+    margin-left: -6px
+    border-top-color: rgb(25, 25, 25)
+    border-top-color: rgba(25, 25, 25, 0.92)
+  &.tip_bottom #tiptip_arrow_inner
+    margin-top: -5px
+    margin-left: -6px
+    border-bottom-color: rgb(25, 25, 25)
+    border-bottom-color: rgba(25, 25, 25, 0.92)
+  &.tip_right #tiptip_arrow_inner
+    margin-top: -6px
+    margin-left: -5px
+    border-right-color: rgb(25, 25, 25)
+    border-right-color: rgba(25, 25, 25, 0.92)
+  &.tip_left #tiptip_arrow_inner
+    margin-top: -6px
+    margin-left: -7px
+    border-left-color: rgb(25, 25, 25)
+    border-left-color: rgba(25, 25, 25, 0.92)
+
+/* Webkit Hacks
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  #tiptip_content
+    padding: 4px 8px 5px 8px
+    background-color: rgba(45, 45, 45, 0.88)
+  #tiptip_holder
+    &.tip_bottom #tiptip_arrow_inner
+      border-bottom-color: rgba(45, 45, 45, 0.88)
+    &.tip_top #tiptip_arrow_inner
+      border-top-color: rgba(20, 20, 20, 0.92)
