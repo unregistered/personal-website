@@ -1,0 +1,236 @@
+\documentclass[letterpaper]{scrartcl}	% classe article di KOMA
+%\usepackage{xltxtra}
+%\setkomafont{URW Palladio L}
+\usepackage{marvosym}
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+%\usepackage[latin1]{inputenc}	% input encoding
+%\usepackage[T1]{fontenc}	% Font encoding
+\usepackage[LabelsAligned, NoDate]{currvita}	% A good package for CV
+\usepackage[nochapters]{classicthesis} % style ClassicThesis
+\usepackage{url}	% For internet addresses
+\renewcommand{\cvheadingfont}{\color{Maroon}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+%Setup hyperref package, and colours for links, text and headings
+\usepackage{hyperref}		
+\hypersetup{	colorlinks,breaklinks,
+			urlcolor=Maroon, 
+			linkcolor=Black}
+%\usepackage{eurosym}
+
+\newlength{\datebox}\settowidth{\datebox}{2007--present}
+
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} \footnotesize #2 #3 \normalsize%
+\vspace{0.5em}}
+
+\newcommand{\Description}[2]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{\MarginDate{#1}#2}\par\normalsize}
+\newcommand{\Sep}{\vspace{1.5em}}
+\newcommand{\Space}{\ \ $\cdotp$\ \ }
+\newcommand{\Title}[1]{\vspace{1.5em}\noindent\textcolor{BlueViolet}{\spacedlowsmallcaps{\large#1\normalsize}}\\\vspace{1.5em}}
+\newcommand{\Role}[1]{\vspace{0.5em}{#1}}
+\newcommand{\Break}{\pagebreak\LARGE{$\;$}\\\normalsize}
+\def\Cplusplus{{\rm C\raise.5ex\hbox{\small ++}}}
+\def\CSharp{{\rm C\raise.5ex\hbox{\small \#}}}
+
+
+%% Begin document
+\begin{document}
+\thispagestyle{empty}
+\begin{cv}{\LARGE\\{\LARGE\spacedallcaps{Christopher Li}}}
+\vspace{0.5em}
+	
+{\large\Letter} \href{mailto:licy@usc.edu}{licy@usc.edu}\ {\large\Telefon} 636 674 9307
+\vspace{2.0em}
+%\NewWorkExperience{email}{\href{mailto:licy@usc.edu}{licy@usc.edu}}{}
+%\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{email}}\hspace{1.5em} \small licy@usc.edu
+
+%\NewWorkExperience{phone}{636 674 9307}{}
+%\vspace{1.5em}
+
+\Description{Introduction}{I am an electrical engineering student with a strong background in programming and experience in design.}
+
+%
+%
+% Qualifications
+%
+%
+%
+\Title{Qualifications}
+
+%\newlength{\langbox}
+%\settowidth{\langbox}{English}
+%\Description{\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \  \ Fluent}
+
+%\vspace{0.5em}
+
+%\Description{\parbox{\langbox}{\textsc{French}}\ \ $\cdotp$\ \  \ Fluent}
+%\MarginDate{Languages}
+%\vspace{0.5em}
+
+%\Description{\parbox{\langbox}{\textsc{Italian}}\ \ $\cdotp$\ \ \  Mother Tongue}
+%\vspace{1em}
+
+\Description{Languages}{\Cplusplus\Space {\sc php}\Space {\sc sql}\Space \textsc{Matlab}\Space {\sc html} \textit{\&} {\sc css}\Space JavaScript\Space Bash\Space \newline Ruby\Space \LaTeX}\vspace{1em}
+
+%\Description{Frameworks}{CodeIgniter\Space jQuery\Space Ruby on Rails}\vspace{1em}
+
+\Description{Tools}{\textsc{Matlab}\Space Adobe Illustrator\Space Photoshop\Space Fireworks\Space *nix\Space Bash\Space Vim \Space Linux Administration\Space Git\Space Subversion\Space Xilinx ISE\Space Eagle }
+
+%
+%
+% Work Experience
+% 
+%
+\Title{Work Experience}
+\NewWorkExperience{summer 2011}{Developer at BountyBuy}
+
+\Description{BountyBuy}{\normalfont Worked for the VC-funded startup to create a new kind of shopping website. Responsible for implementation of designs to haml and sass as well as JavaScript interactions. Contributed to back end work in Ruby on Rails.
+
+\Role{
+\href{http://bountybuy.com}{bountybuy.com}
+}
+}
+
+\Sep
+
+\NewWorkExperience{2009--present}{BeoHawk Navigation Software}
+
+\Description{USC Aerial Robotics}{\normalfont Wrote navigation software 
+with ROS in \Cplusplus\ and Python for an autonomous quadrotor helicopter. Attended the AUVSI International Aerial Robotics Competition in 2011.
+
+\Role{
+\href{http://github.com/uscrs-art/}{github.com/uscrs-art}
+}
+}
+
+\Sep
+
+\NewWorkExperience{2009--present}{USC Robotics Society Web Team}
+
+\Description{USC Robotics Society}{Developed
+web services to help the robotics club operate smoothly using PyroCMS.  Worked closely with 
+the business management team to develop an ordering system
+that automated reimbursements and organized their receipts.
+Contributed patches to the upstream project.
+
+\Role{
+\textit{Project Lead 2010--present}\Space \href{http://uscrs.org}{uscrs.org}
+}
+}
+
+
+%\Break
+
+%
+%
+% Activities
+%
+%
+%\Title{Activities}
+%\NewWorkExperience{2009--present}{Developer}
+%
+%\Description{USC Robotics}{Aerial Robotics.
+%
+%\Role{
+%\textit{Web Lead 2009--present}
+%}
+%}
+%\Sep
+
+%\newlength{\langbox}
+%\settowidth{\langbox}{USC Robotics Society }
+%
+%\Description{Conferences Attended}{NAE Grand Challenges Summit\Space Los Angeles, CA\Space October 7-8 2010}
+%\vspace{0.5em}
+%
+%\Description{}{TEDxUSC\Space Los Angeles, CA\Space April 13 2010}
+%\vspace{0.5em}
+%\Description{}{Google \textsc{io} 2009\Space San Francisco, CA\Space May 27-28 2009}
+%
+%\vspace{1.5em}
+%
+%
+%\Description{Clubs}{\parbox{\langbox}{USC Robotics Society}\textit{Web Team Lead}\Space 2010--present
+%
+%\parbox{\langbox}{$\ $}\textit{Aerial Team Member}\Space 2009--present
+%}
+%\vspace{0.5em}
+
+
+%\NewWorkExperience{2009--present}{USC Robotics}
+%
+%\Description{}{\textit{Web Lead 2010--present}
+%}
+%\Sep
+%
+%\NewWorkExperience{Summer 2009}{Google IO Developer Conference}
+%
+%%\Description{}{}
+%\Sep
+%
+%\NewWorkExperience{2008--2009}{Brahma IB Students}
+%
+%\Description{}{\textit{Technical Director 2008--2009}
+%}
+%\Sep
+%
+%\NewWorkExperience{2007-2009}{GAME Club}
+%
+%\Description{}{\textit{Vice President 2007--2008}\Space 
+%\textit{Technical Director 2007-2009}
+%}
+
+%
+%
+% Education
+%
+%
+\Title{Education}
+
+%\NewWorkExperience{University of Southern California}{Los Angeles}
+%\Description{USC Presidential Scholarship\Space WVT Rusch Honors Program\MarginDate{Electrical Engineering}\newline Viterbi School of Engineering Dean's List\Space GPA: 3.7}
+
+\NewWorkExperience{class of 2013}{University of Southern California, Los Angeles}
+
+\Description{}{B.S. Electrical Engineering\Space GPA: 3.7 
+\vspace{1.0em}
+}
+
+%\Description{Related Coursework}{Data Structures\Space Fundamentals of Design
+%}
+
+%\NewWorkExperience{2005--2009}{Diamond Bar High School}
+%
+%\Description{International Baccalaureate}{High School Diploma\Space International Baccalaureate Diploma 
+%\vspace{1.0em}
+%}
+
+
+%
+%
+% Honors
+%
+%
+\Title{Honors and Awards}
+
+\noindent\hangindent=5mm\hangafter=0 \footnotesize{
+\begin{tabular}{lll}
+Rose Hills Foundation Fellowship & \ \ & summer 2011\\
+Viterbi School of Engineering Dean's List & \ \ & 2009 - present\\
+Alpha Lambda Delta Honors Society & \ \ & 2009 - present\\
+USC Presidential Scholarship & \ \ & 2009 - present \\ 
+W.V.T. Rusch Engineering Honors Program  & \ \ & 2009 - present \\
+\end{tabular}
+}\par\normalsize
+
+%
+%
+% EC Activities
+%
+%
+%\Title{Interests}
+%\Description{}{Tennis\Space Volleyball\Space Music\Space Server Administration\Space Design}
+
+\end{cv}
+\end{document}
