@@ -39,9 +39,14 @@ task :watch do
   end
 end
 
+desc 'Generate resume from tex'
+task :resume do
+  sh 'cd resume && pdflatex chrisli_resume.tex && latexmk -c'
+end
+
 desc 'Deploy my site'
 task :deploy do
-  puts `ssh chris@sevenservers.com 'cd ~/www/chris/public_html && git pull'`
+  sh "ssh chris@sevenservers.com 'cd ~/www/chris/public_html && git pull'"
 end
 
 task :default => [:build, :watch]
